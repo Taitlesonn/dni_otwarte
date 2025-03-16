@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dni Otwarte ZS26 Warszawa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Kontener dla animowanych kulek -->
+  <div class="floating-balls">
+    <div class="ball ball1"></div>
+    <div class="ball ball2"></div>
+    <div class="ball ball3"></div>
+    <div class="ball ball4"></div>
+    <div class="ball ball5"></div>
+  </div>
+  
+  <header>
+    <h1>Dni Otwarte ZS26 Warszawa</h1>
+  </header>
+  <div class="container">
+    <p>Zapraszamy uczniów klas 8!</p>
+    
+    <!-- Zakładki z informacjami o szkole -->
+    <div class="tabs">
+      <details>
+        <summary>O szkole</summary>
+        <p>
+          ZS26 Warszawa to placówka o bogatej tradycji i nowoczesnym podejściu do edukacji. Szkoła stawia na innowacyjne metody nauczania, rozwój uczniów oraz współpracę z otoczeniem lokalnym.
+        </p>
+      </details>
+      <details>
+        <summary>Oferta edukacyjna</summary>
+        <p>
+          Technikum ZS26 oferuje szeroki wachlarz kierunków i programów nauczania, łączących teorię z praktyką, dzięki czemu uczniowie są przygotowywani do wyzwań przyszłości.
+        </p>
+      </details>
+      <details>
+        <summary>Kontakt</summary>
+        <p>
+          Szczegółowe dane kontaktowe oraz aktualne informacje można znaleźć na oficjalnej stronie: 
+          <a href="https://zs26.edu.pl" target="_blank" rel="noopener noreferrer">zs26.edu.pl</a>
+        </p>
+      </details>
+    </div>
+    
+    <!-- Opis szkoły -->
+    <section class="school-description">
+      <p>
+        ZS26 Warszawa to szkoła o długiej tradycji i nowoczesnym podejściu do edukacji. Nasze laboratoria, doświadczona kadra i innowacyjne metody nauczania przygotowują młodzież do przyszłości!
+      </p>
+    </section>
+    
+    <!-- Quiz -->
+    <div class="quiz">
+      <div class="quiz-question" id="quiz-question">
+        Dlaczego chcesz wybrać naszą szkołę?
+      </div>
+      <div class="quiz-options" id="quiz-options">
+        <button data-answer="a">A. Bo mamy nowoczesne laboratoria</button>
+        <button data-answer="b">B. Bo oferujemy świetną kadrę</button>
+        <button data-answer="c">C. Bo przygotowujemy do przyszłości</button>
+      </div>
+      <div class="quiz-result" id="quiz-result"></div>
+    </div>
+  </div>
+  
+  <!-- Przycisk "Góra" -->
+  <button id="backToTop">Góra</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>

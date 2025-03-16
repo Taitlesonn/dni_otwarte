@@ -1,0 +1,206 @@
+/* Kontener animowanych kulek */
+.floating-balls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -2;
+}
+
+/* Style dla kulek */
+.floating-balls .ball {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* Konfiguracja poszczególnych kulek z indywidualnymi animacjami */
+.ball1 {
+  width: 80px;
+  height: 80px;
+  background: rgba(37, 117, 252, 0.7);
+  top: 10%;
+  left: 5%;
+  animation: moveBall1 25s ease-in-out infinite;
+}
+.ball2 {
+  width: 120px;
+  height: 120px;
+  background: rgba(106, 17, 203, 0.6);
+  top: 50%;
+  left: 80%;
+  animation: moveBall2 30s ease-in-out infinite;
+}
+.ball3 {
+  width: 60px;
+  height: 60px;
+  background: rgba(37, 117, 252, 0.5);
+  top: 80%;
+  left: 20%;
+  animation: moveBall3 20s ease-in-out infinite;
+}
+.ball4 {
+  width: 100px;
+  height: 100px;
+  background: rgba(106, 17, 203, 0.5);
+  top: 30%;
+  left: 40%;
+  animation: moveBall4 28s ease-in-out infinite;
+}
+.ball5 {
+  width: 90px;
+  height: 90px;
+  background: rgba(37, 117, 252, 0.6);
+  top: 70%;
+  left: 70%;
+  animation: moveBall5 22s ease-in-out infinite;
+}
+
+/* Kluczowe animacje dla poszczególnych kulek */
+@keyframes moveBall1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(200px, 100px) scale(1.2); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes moveBall2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-150px, 150px) scale(1.3); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes moveBall3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(100px, -200px) scale(0.8); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes moveBall4 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-250px, 50px) scale(1.4); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes moveBall5 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(150px, 200px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Nowoczesny, minimalistyczny design */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333;
+}
+header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: slideDown 1s ease-out;
+}
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Zakładki */
+.tabs details {
+  background: #e6e6ff;
+  border-radius: 5px;
+  margin: 1rem 0;
+  padding: 1rem;
+  transition: background 0.3s;
+}
+.tabs details[open] {
+  background: #d0d0ff;
+}
+.tabs summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2rem;
+}
+/* Animacja fade in dla treści zakładki */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.tabs details[open] p {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.school-description p {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.quiz {
+  margin-top: 2rem;
+}
+.quiz-question {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.quiz-options button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  background: #2575fc;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.quiz-options button:hover {
+  background: #6a11cb;
+  transform: scale(1.02);
+}
+.quiz-result {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #2575fc;
+}
+
+/* Przycisk "Góra" */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}

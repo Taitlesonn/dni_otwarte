@@ -24,3 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+
+
+
+
+
+
+
+
+// Funkcja ustawiająca język na podstawie zapisanego wyboru
+function setLanguage() {
+  const language = localStorage.getItem('preferredLanguage') || 'pl';
+  document.getElementById('language').value = language;
+  // Tutaj można dodać kod do załadowania treści w wybranym języku
+}
+
+// Ustaw język po załadowaniu strony
+document.addEventListener('DOMContentLoaded', setLanguage);
